@@ -1,0 +1,15 @@
+main.o: main.cpp controller/dnaApp.h controller/DnaSequence.h \
+ controller/../view/CLI.h controller/../view/cmdParser.h \
+ controller/../model/data.h \
+ controller/../model/../controller/DnaSequence.h \
+ controller/../model/sharedPtr.h
+data.o: model/data.cpp model/data.h model/../controller/DnaSequence.h \
+ model/sharedPtr.h model/readFile.h model/writeFile.h
+CLI.o: view/CLI.cpp view/CLI.h view/cmdParser.h
+cmdParser.o: view/cmdParser.cpp view/cmdParser.h
+DnaSequence.o: controller/DnaSequence.cpp controller/DnaSequence.h
+dnaApp.o: controller/dnaApp.cpp controller/dnaApp.h \
+ controller/DnaSequence.h controller/../view/CLI.h \
+ controller/../view/cmdParser.h controller/../model/data.h \
+ controller/../model/../controller/DnaSequence.h \
+ controller/../model/sharedPtr.h
